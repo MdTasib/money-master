@@ -1,10 +1,17 @@
 // get input value
 function getInputValue(input) {
 	const inputField = document.getElementById(input);
-	const inputAmountText = inputField.value;
-	const inputAmount = parseFloat(inputAmountText);
 
-	return inputAmount;
+	// validate input
+	if (isNaN(inputField.value)) {
+		return alert("Please give a valid number in - " + input);
+	} else if (inputField.value < 0) {
+		return console.log("Please give a positive number - " + input);
+	} else {
+		const inputAmountText = inputField.value;
+		const inputAmount = parseFloat(inputAmountText);
+		return inputAmount;
+	}
 
 	// inputField.value = "";
 }
@@ -16,6 +23,7 @@ function getTotalExpense() {
 	const rentExpenses = getInputValue("rent");
 	const clotheExpenses = getInputValue("clothe");
 
+	// expenses convert to number
 	const totalExpensesField = document.getElementById("total-expenses");
 	const totalExpensesText = totalExpensesField.innerText;
 	const previousTotalExpensesAmount = parseFloat(totalExpensesText);

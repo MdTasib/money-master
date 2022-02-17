@@ -4,9 +4,11 @@ function getInputValue(input) {
 
 	// validate input
 	if (isNaN(inputField.value) || inputField.value == "") {
-		return alert("Please give a valid number in - " + input);
+		// return alert("Please give a valid number in - " + input);
+		return errorHandle("Please give a valid number");
 	} else if (inputField.value < 0) {
-		return alert("Please give a positive number - " + input);
+		// return alert("Please give a positive number - " + input);
+		return errorHandle("Please give a positive number");
 	} else {
 		const inputAmountText = inputField.value;
 		const inputAmount = parseFloat(inputAmountText);
@@ -40,7 +42,10 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 
 	// income balance and total expenses amount check
 	if (income < totalExpensesCount) {
-		return alert("Expenses balance should be less stable than income balance.");
+		// return alert("Expenses balance should be less stable than income balance.");
+		return errorHandle(
+			"Expenses balance should be less stable than income balance."
+		);
 	} else {
 		// count balance amount
 		const balanceCount = income - totalExpensesCount;
@@ -67,3 +72,9 @@ document.getElementById("save-btn").addEventListener("click", function () {
 		document.getElementById("remaining-balance").innerText = remainingAmount;
 	}
 });
+
+function errorHandle(error) {
+	alert(error);
+	// document.getElementById("total-expenses").innerText = 00;
+	// document.getElementById("total-balance").innerText = 00;
+}

@@ -6,7 +6,7 @@ function getInputValue(input) {
 	if (isNaN(inputField.value) || inputField.value == "") {
 		return alert("Please give a valid number in - " + input);
 	} else if (inputField.value < 0) {
-		return console.log("Please give a positive number - " + input);
+		return alert("Please give a positive number - " + input);
 	} else {
 		const inputAmountText = inputField.value;
 		const inputAmount = parseFloat(inputAmountText);
@@ -38,6 +38,7 @@ function getTotalExpense() {
 	return totalExpensesCount;
 }
 
+// calculate button handler
 document.getElementById("calculate-btn").addEventListener("click", function () {
 	const income = getInputValue("income");
 	const totalExpensesCount = getTotalExpense();
@@ -53,6 +54,7 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 	}
 });
 
+// save button handler
 document.getElementById("save-btn").addEventListener("click", function () {
 	const income = getInputValue("income");
 	const savingInput = getInputValue("saving-input");
@@ -64,5 +66,9 @@ document.getElementById("save-btn").addEventListener("click", function () {
 	} else {
 		// display saving amount
 		document.getElementById("saving-amount").innerText = savingAmount;
+
+		const totalBalance = document.getElementById("total-balance");
+		const remainingAmount = parseFloat(totalBalance.innerText) - savingAmount;
+		document.getElementById("remaining-balance").innerText = remainingAmount;
 	}
 });

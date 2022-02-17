@@ -42,13 +42,13 @@
 					<div class="mb-3 row">
 						<label for="food" class="col-md-4 col-form-label"> Food : </label>
 						<div class="col-md-8">
-							<input type="password" class="form-control" id="food" />
+							<input type="text" class="form-control" id="food" />
 						</div>
 					</div>
 					<div class="mb-3 row">
 						<label for="rent" class="col-md-4 col-form-label"> Rent : </label>
 						<div class="col-md-8">
-							<input type="password" class="form-control" id="rent" />
+							<input type="text" class="form-control" id="rent" />
 						</div>
 					</div>
 					<div class="mb-3 row">
@@ -56,13 +56,15 @@
 							Clothes :
 						</label>
 						<div class="col-md-8">
-							<input type="password" class="form-control" id="clothe" />
+							<input type="text" class="form-control" id="clothe" />
 						</div>
 					</div>
 
 					<!-- Calculate area -->
 					<div class="py-3">
-						<button class="btn btn-primary text-white mb-3">Calculate</button>
+						<button id="calculate-btn" class="btn btn-primary text-white mb-3">
+							Calculate
+						</button>
 						<h6>Total Expenses : <span>0000</span></h6>
 						<h6>Balance : <span>0000</span></h6>
 					</div>
@@ -75,11 +77,7 @@
 									Save:
 								</label>
 								<div class="col-md-6">
-									<input
-										type="password"
-										class="form-control w-100"
-										id="clothe"
-									/>
+									<input type="text" class="form-control w-100" id="clothe" />
 								</div>
 							</div>
 						</div>

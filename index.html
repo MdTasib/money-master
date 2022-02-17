@@ -71,23 +71,32 @@
 
 					<!-- saving amout area -->
 					<div class="row py-3">
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="row">
-								<label for="clothe" class="col-md-6 col-form-label">
+								<label for="clothe" class="col-md-4 col-form-label">
 									Save:
 								</label>
-								<div class="col-md-6">
-									<input type="text" class="form-control w-100" id="clothe" />
+								<div class="col-md-8">
+									<input
+										id="saving-input"
+										type="text"
+										class="form-control w-100"
+										id="clothe"
+									/>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-2">%</div>
-						<div class="col-md-5">
-							<button class="w-100 btn btn-primary text-white">Save</button>
+						<div class="col-md-4">
+							<button id="save-btn" class="w-100 btn btn-primary text-white">
+								Save
+							</button>
 						</div>
 						<div class="pt-4">
-							<h6>Saving Amount : <span>0000</span></h6>
-							<h6>Remaining Balance : <span>0000</span></h6>
+							<h6>Saving Amount : <span id="saving-amount">0000</span></h6>
+							<h6>
+								Remaining Balance : <span id="remaining-balance">0000</span>
+							</h6>
 						</div>
 					</div>
 				</div>

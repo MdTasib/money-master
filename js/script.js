@@ -12,8 +12,6 @@ function getInputValue(input) {
 		const inputAmount = parseFloat(inputAmountText);
 		return inputAmount;
 	}
-
-	// inputField.value = "";
 }
 
 // total expenses function
@@ -25,12 +23,9 @@ function getTotalExpense() {
 
 	// expenses convert to number
 	const totalExpensesField = document.getElementById("total-expenses");
-	const totalExpensesText = totalExpensesField.innerText;
-	const previousTotalExpensesAmount = parseFloat(totalExpensesText);
 
 	// total expenses count
-	const totalExpensesCount =
-		previousTotalExpensesAmount + foodExpenses + rentExpenses + clotheExpenses;
+	const totalExpensesCount = foodExpenses + rentExpenses + clotheExpenses;
 
 	// The value of total expenses is displayed
 	totalExpensesField.innerText = totalExpensesCount;
